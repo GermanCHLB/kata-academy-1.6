@@ -1,0 +1,56 @@
+.title {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+  ::before {
+    content: "";
+    border-right: 4px solid #41f6d7;
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    border-radius: 4px;
+  }
+
+  .title__h1 {
+    font-family: TTLakes, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+  }
+
+  .title__menu {
+    display: none;
+
+    @media (min-width: 1120px) {
+      display: block;
+    }
+  }
+
+  .title__link {
+    :first-child {
+      margin-right: 32px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      font-family: TTLakes, sans-serif;
+      color: #1b1c21;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 500;
+
+      img {
+        margin-left: 8px;
+      }
+    }
+
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

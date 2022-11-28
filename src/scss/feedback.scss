@@ -1,0 +1,146 @@
+.feedback {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(256, 256, 256, 0.96);
+  z-index: 100;
+  .feedback__container {
+    border-left: 1px solid #d9fff5;
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+    margin-left: auto;
+    height: 100vh;
+    padding: 24px 16px;
+    width: 100vw;
+
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+
+    @media (min-width: 768px) {
+      width: 440px;
+      padding: 40px 32px;
+    }
+
+    .feedback__close-btn {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+      }
+
+      @media (min-width: 768px) {
+        position: absolute;
+        left: -73px
+      }
+    }
+
+    h2 {
+      position: relative;
+      margin-top: 40px;
+      font-size: 24px;
+      line-height: 32px;
+      font-family: TTLakes, sans-serif;
+      font-weight: bold;
+      &:before {
+        content: "";
+        border-right: 4px solid #41f6d7;
+        height: 40px;
+        border-radius: 3px;
+        position: absolute;
+
+        top: -11px;
+        left: -17px;
+        @media (min-width: 768px) {
+          top: -11px;
+          left: -33px;
+        }
+      }
+    }
+
+    form {
+      border: none;
+      margin-top: 24px;
+
+      fieldset {
+        border: none;
+
+        input, textarea {
+          border: 1px solid #eaeaea;
+          border-radius: 8px;
+          padding: 12px 16px;
+        }
+
+        input {
+          width: 100%;
+          height: 48px;
+          margin-top: 16px;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          height: 120px;
+          margin-top: 16px;
+          resize: none;
+        }
+      }
+      p {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 16px;
+        font-family: TTLakes, sans-serif;
+        font-weight: 400;
+        color: #7e7e82;
+        span {
+          color: #ff3e79;
+        }
+      }
+
+      button {
+        margin: 19px 0 0 auto;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        background-color: #ff3e79;
+        padding: 4px 8px;
+        border-radius: 16px;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          opacity: 0.9;
+        }
+
+        p {
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 24px;
+          font-family: TTLakes, sans-serif;
+          font-weight: 500;
+          color: #fff;
+          margin: 0 0 0 16px;
+        }
+      }
+    }
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
