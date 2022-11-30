@@ -29,7 +29,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-color: #fff; }
+  background-color: #fff;
+  overflow-x: hidden; }
 
 .article {
   margin-top: 24px;
@@ -92,6 +93,18 @@ body {
   @media (min-width: 768px) {
     .article {
       flex-wrap: nowrap; } }
+  .article--closed .article__text--size--full {
+    display: none; }
+  .article--opened .article__text--size--full {
+    display: block; }
+  .article--opened .article__text--size--small {
+    display: none; }
+  .article--opened .article__text--size--medium {
+    display: none; }
+  .article--opened .article__text--size--large {
+    display: none; }
+  .article .close-btn {
+    display: block; }
 
 .aside {
   grid-area: aside;
